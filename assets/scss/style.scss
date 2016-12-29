@@ -12,369 +12,326 @@ Primary style
 
 -------------------------------- */
 
-section * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+*, *::after, *::before {
+	box-sizing: border-box;
 }
 
-*, *:after, *:before {
-	@include box-sizing(border-box);
+html {
+	font-size: 62.5%;
 }
 
 body {
 	font: {
-		size: 100%;
+		size: 1.6rem;
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
-	color: $main-text;
-	background-color: $background;
+	color: $color-1;
+	background-color: $color-4;
 }
 
 a {
-	color: $link;
+	color: $color-2;
 	text-decoration: none;
-	font-family: $secondary-font;
-}
-
-img {
-	max-width: 100%;
-}
-
-
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-
-.cd-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
-
-	&::after { /* clearfix */
-		content: '';
-		display: table;
-		clear: both;
-	}
 }
 
 /* -------------------------------- 
 
-Main components 
+Main Components 
 
 -------------------------------- */
 
-header {
-	height: 200px;
-	line-height: 200px;
-	text-align: center;
-	background: $color-1;
-
-	h1 {
-		color: $color-3;
-		@include font-size(18px);
-	}
-
-	@include MQ(L) {
-		height: 300px;
-		line-height: 300px;
-
-		h1 {
-			@include font-size(24px);
-		}
-	}
-}
-
-#cd-timeline {
-	position: relative;
-	padding: 2em 0;
-	margin: {
-		top: 2em;
-		bottom: 2em;
-	}
+.cd-horizontal-timeline {
+	opacity: 0;
+	margin: 2em auto;
+	@include transition(opacity .2s);
 
 	&::before {
-		/* this is the vertical line */
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 18px;
-		height: 100%;
-		width: 4px;
-		background: darken($background, 5%);
+		/* never visible - this is used in jQuery to check the current MQ */
+		content: 'mobile';
+		display: none;
 	}
 
-	@include MQ(L) {
-		margin: {
-			top: 3em;
-			bottom: 3em;
+	&.loaded {
+		/* show the timeline after events position has been set (using JavaScript) */
+		opacity: 1;
+	}
+
+	.timeline {
+		position: relative;
+		height: 100px;
+		width: 90%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.events-wrapper {
+		position: relative;
+		height: 100%;
+		margin: 0 40px;
+		overflow: hidden;
+
+		&::after, &::before {
+			/* these are used to create a shadow effect at the sides of the timeline */
+			content: '';
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			height: 100%;
+			width: 20px;
 		}
 
 		&::before {
-			left: 50%;
-			margin-left: -2px;
+			left: 0;
+	    	@include background-image(linear-gradient(to right,$color-4, rgba($color-4, 0)));
+		}
+
+		&::after {
+			right: 0;
+			@include background-image(linear-gradient(to left,$color-4, rgba($color-4, 0)));
 		}
 	}
-}
 
-.cd-timeline-block {
-	position: relative;
-	margin: 2em 0;
-	@include clearfix;
-
-	&:first-child {
-		margin-top: 0;
+	.events {
+		/* this is the grey line/timeline */
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 49px;
+		height: 2px;
+		/* width will be set using JavaScript */
+		background: darken($color-4, 10%);
+		@include transition(transform .4s);
 	}
 
-	&:last-child {
-		margin-bottom: 0;
+	.filling-line {
+		/* this is used to create the green line filling the timeline */
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: $color-2;
+		@include transform(scaleX(0));
+		@include transform-origin(left center);
+		@include transition(transform .3s);
+	}
+
+	.events a {
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+		text-align: center;
+		font-size: 1.3rem;
+		padding-bottom: 15px;
+		color: $color-1;
+		/* fix bug on Safari - text flickering while timeline translates */
+		@include transform(translateZ(0));
+
+		&::after {
+			/* this is used to create the event spot */
+			content: '';
+			position: absolute;
+			@include center(x);
+			bottom: -5px;
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			border: 2px solid darken($color-4, 10%);
+			background-color: $color-4;
+			@include transition(background-color .3s, border-color .3s);
+		}
+
+		.no-touch &:hover::after {
+			background-color: $color-2;
+			border-color: $color-2;
+		}
+
+		&.selected {
+			pointer-events: none;
+
+			&::after {
+				background-color: $color-2;
+				border-color: $color-2;
+			}
+		}
+
+		&.older-event::after {
+			border-color: $color-2;
+		}
 	}
 
 	@include MQ(L) {
-		margin: 4em 0;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
+		margin: 6em auto;
+		
+		&::before {
+			/* never visible - this is used in jQuery to check the current MQ */
+			content: 'desktop';
 		}
 	}
 }
 
-.cd-timeline-img {
+.cd-timeline-navigation a {
+	/* these are the left/right arrows to navigate the timeline */
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 40px;
-	height: 40px;
+	z-index: 1;
+	@include center(y);
+	height: 34px;
+	width: 34px;
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
-
-	img {
-		display: block;
-		width: 24px;
-		height: 24px;
-		position: relative;
-		left: 50%;
-		top: 50%;
-		margin-left: -12px;
-		margin-top: -12px;
+	border: 2px solid darken($color-4, 10%);
+	/* replace text with an icon */
+	overflow: hidden;
+	color: transparent;
+	text-indent: 100%;
+	white-space: nowrap;
+	@include transition(border-color .3s);
+	
+	&::after {
+		/* arrow icon */
+		content: '';
+		position: absolute;
+		height: 16px;
+		width: 16px;
+		@include center;
+		background: url(../images/cd-arrow.svg) no-repeat 0 0;
 	}
 
-	&.cd-picture {
-		background: $color-4;
+	&.prev {
+		left: 0;
+		@include transform(translateY(-50%) rotate(180deg));
 	}
 
-	&.cd-movie {
-		background: $color-2;
+	&.next {
+		right: 0;
 	}
 
-	&.cd-location {
-		background: $color-5;
+	.no-touch &:hover {
+		border-color: $color-2;
 	}
 
-	@include MQ(L) {
-		width: 60px;
-		height: 60px;
-		left: 50%;
-		margin-left: -30px;
+	&.inactive {
+		cursor: not-allowed;
 
-		/* Force Hardware Acceleration in WebKit */
-		-webkit-transform: translateZ(0);
-		-webkit-backface-visibility: hidden;
-
-		.cssanimations &.is-hidden {
-			visibility: hidden;
+		&::after {
+			background-position: 0 -16px;
 		}
 
-		.cssanimations &.bounce-in {
-			visibility: visible;
-			@include animation(cd-bounce-1 .6s);
+		.no-touch &:hover {
+			border-color: darken($color-4, 10%);
 		}
 	}
 }
 
-@include keyframes(cd-bounce-1) {
-	0% {
-		opacity: 0;
-		@include transform(scale(.5));
-	}
-
-	60% {
-		opacity: 1;
-		@include transform(scale(1.2));
-	}
-
-	100% {
-		@include transform(scale(1));
-	}
-}
-
-.cd-timeline-content {
+.cd-horizontal-timeline .events-content {
 	position: relative;
-	margin-left: 60px;
-	background: $color-3;
-	@include border-radius;
-	padding: 1em;
-	box-shadow: 0 3px 0 darken($background, 5%);
-	@include clearfix;
+	width: 100%;
+	margin: 2em 0;
+	overflow: hidden;
+	@include transition(height .4s);
+
+	li {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		left: 0;
+		top: 0;
+		@include transform(translateX(-100%));
+		padding: 0 5%;
+		opacity: 0;
+		@include animation-duration(.4s);
+		@include animation-timing-function(ease-in-out);
+
+		&.selected {
+			/* visible event content */
+			position: relative;
+			z-index: 2;
+			opacity: 1;
+			@include transform(translateX(0));
+		}
+
+		&.enter-right, &.leave-right {
+			@include animation-name(cd-enter-right);
+		}
+
+		&.enter-left,  &.leave-left {
+			@include animation-name(cd-enter-left);
+		}
+		
+		&.leave-right, &.leave-left {
+			@include animation-direction(reverse);
+		}
+	}
+	
+	li > * {
+		max-width: 800px;
+		margin: 0 auto;
+	}
 
 	h2 {
-		color: $color-1;
+		font-weight: bold;
+		font-size: 2.6rem;
+		font-family: $secondary-font;
+		font-weight: 700;
+		line-height: 1.2;
 	}
 
-	p, .cd-read-more, .cd-date {
-		@include font-size(13px);
-	}
+	em {
+		display: block;
+		font-style: italic;
+		margin: 10px auto;
 
-	.cd-read-more, .cd-date {
-		display: inline-block;
+		&::before {
+			content: '- ';
+		}
 	}
 
 	p {
-		margin: 1em 0;
+		font-size: 1.4rem;
+		color: shade($color-4, 40%);
+	}
+
+	em, p {
 		line-height: 1.6;
 	}
 
-	.cd-read-more {
-		float: right;
-		padding: .8em 1em;
-		background: $link;
-		color: $color-3;
-		@include border-radius;
-
-		.no-touch &:hover {
-			background-color: lighten($link, 5%);
-		}
-	}
-
-	.cd-date {
-		float: left;
-		padding: .8em 0;
-		opacity: .7;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 16px;
-		right: 100%;
-		height: 0;
-		width: 0;
-		border: 7px solid transparent;
-		border-right: 7px solid $color-3;
-	}
-
 	@include MQ(M) {
+
 		h2 {
-			@include font-size(20px);
+			font-size: 7rem;
+		}
+
+		em {
+			font-size: 2rem;
 		}
 
 		p {
-			@include font-size(16px);
-		}
-
-		.cd-read-more, .cd-date {
-			@include font-size(14px);
+			font-size: 1.8rem;
 		}
 	}
-
-	@include MQ(L) {
-		margin-left: 0;
-		padding: 1.6em;
-		width: 45%;
-
-		&::before {
-			top: 24px;
-			left: 100%;
-			border-color: transparent;
-			border-left-color: $color-3;
-		}
-
-		.cd-read-more {
-			float: left;
-		}
-
-		.cd-date {
-			position: absolute;
-			width: 100%;
-			left: 122%;
-			top: 6px;
-			@include font-size(16px);
-		}
-
-		.cd-timeline-block:nth-child(even) & {
-			float: right;
-
-			&::before {
-				top: 24px;
-				left: auto;
-				right: 100%;
-				border-color: transparent;
-				border-right-color: $color-3;
-			}
-
-			.cd-read-more {
-				float: right;
-			}
-
-			.cd-date {
-				left: auto;
-				right: 122%;
-				text-align: right;
-			}
-		}
-
-		.cssanimations &.is-hidden {
-			visibility: hidden;
-		}
-
-		.cssanimations &.bounce-in {
-			visibility: visible;
-			@include animation(cd-bounce-2 .6s);
-		}
-	}
+	
 }
 
-@include MQ(L) {
-	/* inverse bounce effect on even content blocks */
-	.cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
-		@include animation(cd-bounce-2-inverse .6s);
-	}
-}
-
-@include keyframes(cd-bounce-2) {
+@include keyframes(cd-enter-right) {
 	0% {
 		opacity: 0;
-		@include transform(translateX(-100px));
-	}
-
-	60% {
-		opacity: 1;
-		@include transform(translateX(20px));
+		@include transform(translateX(100%));
 	}
 
 	100% {
-		@include transform(translateX(0));
+		opacity: 1;
+		@include transform(translateX(0%));
 	}
 }
 
-@include keyframes(cd-bounce-2-inverse) {
+@include keyframes(cd-enter-left) {
 	0% {
 		opacity: 0;
-		@include transform(translateX(100px));
-	}
-
-	60% {
-		opacity: 1;
-		@include transform(translateX(-20px));
+		@include transform(translateX(-100%));
 	}
 
 	100% {
-		@include transform(translateX(0));
+		opacity: 1;
+		@include transform(translateX(0%));
 	}
 }
-

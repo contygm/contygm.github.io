@@ -3,7 +3,7 @@
   <html>
     <head>
 		<!--Import Google Icon Font-->
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		
 		
@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="assets/css/reset.css"> <!-- CSS reset -->		
 		<link rel="stylesheet" href="assets/css/timeline_style.css"> <!-- Resource style -->
 		
-		<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'><!--fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'><!--fonts -->
 
 		<!--Import materialize.css-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
@@ -129,7 +129,7 @@
 								</ul>
 							</div>
 							
-							<a class="btn waves-effect waves-purple white-text back-button green left" id ="first" url="url(assets/images/excelsior2.png)">
+							<a class="btn waves-effect waves-purple white-text back-button green left" id ="first" url="url(../images/excelsior2.png)">
 								<i class="fa fa-chevron-left fa-2x " id= "first" aria-hidden="true"></i>
 							</a>	
 						</div>
@@ -377,83 +377,126 @@
 				</div>
 
 				<!-- timeline section -->
-				<section id="cd-timeline" class="cd-container">
-				<div class="cd-timeline-block">
-					<div class="cd-timeline-img cd-picture">
-						<img src="assets/images/cd-icon-picture.svg" alt="Picture">
-					</div> <!-- cd-timeline-img -->
+				<section class="cd-horizontal-timeline" id="timeline">
+					<div class="timeline">
+						<div class="events-wrapper">
+							<div class="events">
+								<ol>
+									<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+									<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+									<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+									<li><a href="#0" data-date="20/05/2014">20 May</a></li>
+									<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+									<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+									<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+									<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+									<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+									<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+									<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+								</ol>
 
-					<div class="cd-timeline-content">
-						<h2>Title of section 1</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-							<span class="cd-date">Jan 14</span>
-						</div> <!-- cd-timeline-content -->
-					</div> <!-- cd-timeline-block -->
-
-					<div class="cd-timeline-block">
-						<div class="cd-timeline-img cd-movie">
-							<img src="assets/images/cd-icon-movie.svg" alt="Movie">
-						</div> <!-- cd-timeline-img -->
-
-						<div class="cd-timeline-content">
-							<h2>Title of section 2</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+								<span class="filling-line" aria-hidden="true"></span>
+							</div> <!-- .events -->
+						</div> <!-- .events-wrapper -->
 							
-							<span class="cd-date">Jan 18</span>
-						</div> <!-- cd-timeline-content -->
-					</div> <!-- cd-timeline-block -->
+						<ul class="cd-timeline-navigation">
+							<li><a href="#0" class="prev inactive">Prev</a></li>
+							<li><a href="#0" class="next">Next</a></li>
+						</ul> <!-- .cd-timeline-navigation -->
+					</div> <!-- .timeline -->
 
-					<div class="cd-timeline-block">
-						<div class="cd-timeline-img cd-picture">
-							<img src="assets/images/cd-icon-picture.svg" alt="Picture">
-						</div> <!-- cd-timeline-img -->
+					<div class="events-content">
+						<ol>
+							<li class="selected" data-date="16/01/2014">
+								<h2>Horizontal Timeline</h2>
+								<em>January 16th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-						<div class="cd-timeline-content">
-							<h2>Title of section 3</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis.</p>
-							
-							<span class="cd-date">Jan 24</span>
-						</div> <!-- cd-timeline-content -->
-					</div> <!-- cd-timeline-block -->
+							<li data-date="28/02/2014">
+								<h2>Event title here</h2>
+								<em>February 28th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-					<div class="cd-timeline-block">
-						<div class="cd-timeline-img cd-location">
-							<img src="assets/images/cd-icon-location.svg" alt="Location">
-						</div> <!-- cd-timeline-img -->
+							<li data-date="20/04/2014">
+								<h2>Event title here</h2>
+								<em>March 20th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-						<div class="cd-timeline-content">
-							<h2>Title of section 4</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-							
-							<span class="cd-date">Feb 14</span>
-						</div> <!-- cd-timeline-content -->
-					</div> <!-- cd-timeline-block -->
+							<li data-date="20/05/2014">
+								<h2>Event title here</h2>
+								<em>May 20th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-					<div class="cd-timeline-block">
-						<div class="cd-timeline-img cd-location">
-							<img src="assets/images/cd-icon-location.svg" alt="Location">
-						</div> <!-- cd-timeline-img -->
+							<li data-date="09/07/2014">
+								<h2>Event title here</h2>
+								<em>July 9th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-						<div class="cd-timeline-content">
-							<h2>Title of section 5</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-							
-							<span class="cd-date">Feb 18</span>
-						</div> <!-- cd-timeline-content -->
-				</div> <!-- cd-timeline-block -->
+							<li data-date="30/08/2014">
+								<h2>Event title here</h2>
+								<em>August 30th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-					<div class="cd-timeline-block">
-						<div class="cd-timeline-img cd-movie">
-							<img src="assets/images/cd-icon-movie.svg" alt="Movie">
-						</div> <!-- cd-timeline-img -->
+							<li data-date="15/09/2014">
+								<h2>Event title here</h2>
+								<em>September 15th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
 
-						<div class="cd-timeline-content">
-							<h2>Final Section</h2>
-							<p>This is the content of the last section</p>
-							<span class="cd-date">Feb 26</span>
-						</div> <!-- cd-timeline-content -->
-					</div> <!-- cd-timeline-block -->
-				</section> <!-- cd-timeline -->
+							<li data-date="01/11/2014">
+								<h2>Event title here</h2>
+								<em>November 1st, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
+
+							<li data-date="10/12/2014">
+								<h2>Event title here</h2>
+								<em>December 10th, 2014</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
+
+							<li data-date="19/01/2015">
+								<h2>Event title here</h2>
+								<em>January 19th, 2015</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
+
+							<li data-date="03/03/2015">
+								<h2>Event title here</h2>
+								<em>March 3rd, 2015</em>
+								<p>	
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+								</p>
+							</li>
+						</ol>
+					</div> <!-- .events-content -->
+				</section>
 			</div>
 		</div>
 
@@ -483,8 +526,11 @@
 
 
 		<!--scripts-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- timeline resource -->
-		<script src="assets/js/main.js"></script> <!-- timeline: Resource jQuery -->
+		<script src="assets/js/jquery-2.1.4.js"></script>
+		<script src="assets/js/jquery.mobile.custom.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		
+		 <!-- timeline: Resources jQuery -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 		<script type="text/javascript" src="assets/js/init.js"></script>

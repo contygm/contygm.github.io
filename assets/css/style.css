@@ -1,0 +1,59 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+h2 {
+	font-size: 3vw;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.brand-logo{
+	margin-left: 10px;
+}
+
+.skills-icon{
+	width: 45px;
+	height: 45px;
+}
+
+.carousel{
+	height: 500px;
+}
+.carousel .carousel-item{
+	width: 550px;
+	height: 400px;
+}
+
+.title-face, .info-face{
+	padding: 10px;
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+
+.title-face {
+	background-color: rgba(212, 212, 212, 0.7);
+}
+
+#first-item {
+	background-image: url(../images/excelsior2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+h6 {
+	margin-left: 10px;
+}
+
+#banner, #aboutMe, #portfolio, #skills, #career {
+	border: 2px solid black;
+}
+
+#banner {
+	height: 700px;
+}

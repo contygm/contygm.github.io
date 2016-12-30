@@ -26,6 +26,19 @@ main {
 	height: 100%;
 }
 
+.title-face, .info-face{
+	padding: 10px;
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	width: 100%;
+  	margin-top: 10px;
+}
+
+.title-face {
+	background-color: rgba(212, 212, 212, 0.7);
+}
+
 @media only screen and (max-width: 768px) {
 	.carousel{
 		height: 300px;
@@ -55,21 +68,39 @@ main {
 	}
 }
 
-.title-face, .info-face{
-	padding: 10px;
-  	position: absolute;
-  	top: 50%;
-  	transform: translateY(-50%);
-  	width: 100%;
-  	margin-top: 10px;
-}
-
-.title-face {
-	background-color: rgba(212, 212, 212, 0.7);
-}
-
 #first-item {
 	background-image: url(../images/rainbow.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+#second-item {
+	background-image: url(../images/red.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#third-item {
+	background-image: url(../images/blue.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#fourth-item {
+	background-image: url(../images/green.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#fifth-item {
+	background-image: url(../images/purple.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#sixth-item {
+	background-image: url(../images/yellow.gif);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }

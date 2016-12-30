@@ -4,10 +4,6 @@ body {
 	flex-direction: column;
 }
 
-h2 {
-	font-size: 3vw;
-}
-
 main {
 	flex: 1 0 auto;
 }
@@ -29,11 +25,22 @@ main {
 	height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  	.carousel{
+		height: 300px;
+	}
+	.carousel .carousel-item{
+		width: 300px;
+		height: 100%;
+	}
+}
+
 .title-face, .info-face{
 	padding: 10px;
   	position: absolute;
   	top: 50%;
   	transform: translateY(-50%);
+  	width: 100%;
 }
 
 .title-face {

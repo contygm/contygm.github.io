@@ -18,6 +18,7 @@ section * {
 
 .h2-timeline {
   font-weight: bold;
+  margin: 0;
 }
 
 /* -------------------------------- 
@@ -77,7 +78,6 @@ entry background (box shadow right under)
 
 .cd-timeline-block {
   position: relative;
-  margin: 2em 0;
 }
 .cd-timeline-block:after {
   content: "";
@@ -92,7 +92,7 @@ entry background (box shadow right under)
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
-    margin: 4em 0;
+    margin: 1em 0;
   }
   .cd-timeline-block:first-child {
     margin-top: 0;
@@ -106,21 +106,22 @@ entry background (box shadow right under)
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border-radius: 30%;
   /* grey for icon circle*/
-  box-shadow: 0 0 0 4px grey, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  /*box-shadow: 0 0 0 4px grey, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
 }
 .cd-timeline-img img {
-  display: block;
+  /*display: block;
   width: 24px;
   height: 24px;
   position: relative;
   left: 50%;
   top: 50%;
   margin-left: -12px;
-  margin-top: -12px;
+  margin-top: -12px;*/
+  visibility: hidden;
 }
 .cd-timeline-img.cd-picture {
   background: #75ce66;
@@ -216,7 +217,7 @@ entry background (box shadow right under)
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 green;
+
 }
 .cd-timeline-content:after {
   content: "";
@@ -264,8 +265,9 @@ entry background (box shadow right under)
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
-    font-size: 20px;
-    font-size: 1.25rem;
+    /*font-size: 20px;
+    font-size: 1.25rem;*/
+
   }
   .cd-timeline-content p {
     font-size: 16px;
@@ -279,7 +281,7 @@ entry background (box shadow right under)
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     margin-left: 0;
-    padding: 1.6em;
+    /*padding: 1.6em;*/
     width: 45%;
   }
   .cd-timeline-content::before {

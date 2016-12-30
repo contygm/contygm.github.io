@@ -17,21 +17,41 @@ main {
 	height: 45px;
 }
 
+
 .carousel{
-	height: 300px;
+	height: 400px;
 }
 .carousel .carousel-item{
-	width: 300px;
+	width: 450px;
 	height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.carousel{
-		height: 400px;
+		height: 300px;
 	}
 	.carousel .carousel-item{
-		width: 450px;
+		width: 300px;
 		height: 100%;
+	}
+	.reg-title{
+		font-size: 24px;
+	}
+
+	.panel-text, .panel-buttons, .tech-used{
+		margin: 0;
+		font-size: 12px;
+	}
+
+	.sub-title{
+		font-size: 18px;
+	}
+	.info-button{
+		font-size: 12px;
+	}
+	.info-face{
+		height: 100%;
+		margin-top: 0;
 	}
 }
 
@@ -41,6 +61,7 @@ main {
   	top: 50%;
   	transform: translateY(-50%);
   	width: 100%;
+  	margin-top: 10px;
 }
 
 .title-face {
@@ -48,7 +69,7 @@ main {
 }
 
 #first-item {
-	background-image: url(../images/excelsior2.png);
+	background-image: url(../images/rainbow.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }

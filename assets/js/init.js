@@ -19,6 +19,9 @@ $(".back-button").click(function(){
 	$( "#"+this.id+ "-title-face").fadeIn("slow");
 	$( "#"+this.id+ "-info-face").hide();
 	$( "#"+this.id+ "-item").removeClass( "grey" );
-	$( "#"+this.id+ "-item" ).css('background-image', this.url);
+
+	var url = $(this).attr("url");
+	$( "#"+this.id+ "-item" ).css('background-image', url);
+
 })
 

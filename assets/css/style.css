@@ -26,7 +26,7 @@ main {
 }
 .carousel .carousel-item{
 	width: 550px;
-	height: 400px;
+	height: 100%;
 }
 
 .title-face, .info-face{

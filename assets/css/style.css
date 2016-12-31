@@ -171,6 +171,28 @@ h6 {
 .skills-icon{
 	width: 45px;
 	height: 45px;
+	filter: grayscale(100%);
+	opacity: 0.7;
+}
+
+/*.skills-icon:hover{
+	filter: grayscale(0%);
+	opacity: 1.0;
+}*/
+
+.skill-icon-row{	
+	color: #4caf50;
+}
+
+.skill-icon-row:hover{
+	/*filter: grayscale(0%);
+	opacity: 1.0;*/
+	color: grey;
+}
+
+.skill-icon-row:hover:first-child img{
+	filter: grayscale(0%);
+	opacity: 1.0;
 }
 
 

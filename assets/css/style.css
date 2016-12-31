@@ -186,3 +186,19 @@ h6 {
 	margin-right: 5px;
 }
 
+#footer-contact li a{
+	color: white;
+}
+
+#footer-contact li:hover i{
+	color: #9C27B0;
+}
+
+#footer-contact li:active i{
+	color: grey;
+}
+
+#footer-contact li:active a{
+	color: grey;
+}
+

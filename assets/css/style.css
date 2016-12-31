@@ -1,3 +1,18 @@
+
+#banner, #aboutMe, #portfolio, #skills, #career {
+	border: 2px solid black;
+
+}
+
+/* 
+
+^^^^^^^^^^^^^^^^
+DELETE WHEN DONE
+
+
+
+ */
+
 body {
 	display: flex;
 	min-height: 100vh;
@@ -8,16 +23,55 @@ main {
 	flex: 1 0 auto;
 }
 
+.fadeInBlock {
+    opacity:0;
+}
+
+/* nav bar */
 .brand-logo{
 	margin-left: 10px;
 }
 
-.skills-icon{
-	width: 45px;
-	height: 45px;
+/* banner */
+#banner {
+	height: 600px;
+	
 }
 
+#banner-content {
+	display: none;
+}
 
+/* about me */
+
+#aboutMe p{
+	font-size: 18px;
+}
+
+.mern-pic{
+	filter: grayscale(100%);
+	opacity: 0.3;
+}
+
+.mern-pic2{
+	filter: grayscale(100%);
+	opacity: 0.5;
+}
+
+#contact-about .fa{
+	color: green;
+}
+
+#contact-about .fa:hover{
+	filter: blur(2px);
+}
+
+#contact-about .fa:active{
+	filter: blur(5px);
+	color: purple;
+}
+
+/* portfolio */
 .carousel{
 	height: 400px;
 }
@@ -66,14 +120,17 @@ main {
 		height: 100%;
 		margin-top: 0;
 	}
+	#aboutMe p{
+		font-size: 14px;
+	}
 }
 
 #first-item {
 	background-image: url(../images/rainbow.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-}
 
+}
 
 #second-item {
 	background-image: url(../images/red.png);
@@ -109,10 +166,11 @@ h6 {
 	margin-left: 10px;
 }
 
-#banner, #aboutMe, #portfolio, #skills, #career {
-	border: 2px solid black;
+
+/* skills secion */
+.skills-icon{
+	width: 45px;
+	height: 45px;
 }
 
-#banner {
-	height: 600px;
-}
+

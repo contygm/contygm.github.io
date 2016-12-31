@@ -4,15 +4,6 @@
 
 }*/
 
-/* 
-
-^^^^^^^^^^^^^^^^
-DELETE WHEN DONE
-
-
-
- */
-
 body {
 	display: flex;
 	min-height: 100vh;
@@ -59,7 +50,7 @@ main {
 }
 
 #contact-about .fa{
-	color: green;
+	color: #4caf50;
 }
 
 #contact-about .fa:hover{

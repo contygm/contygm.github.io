@@ -51,6 +51,7 @@ main {
 
 #contact-about .fa{
 	color: #4caf50;
+	margin: 0 2px 0 2px;
 }
 
 #contact-about .fa:hover{

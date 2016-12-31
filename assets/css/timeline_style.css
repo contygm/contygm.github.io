@@ -253,9 +253,9 @@ entry background (box shadow right under)
 }
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
   opacity: .7;
 }
+
 .cd-timeline-content::before {
   content: '';
   position: absolute;

@@ -173,20 +173,14 @@ h6 {
 	height: 45px;
 	filter: grayscale(100%);
 	opacity: 0.7;
+	padding: 0 8px 6px 0;
 }
-
-/*.skills-icon:hover{
-	filter: grayscale(0%);
-	opacity: 1.0;
-}*/
 
 .skill-icon-row{	
 	color: #4caf50;
 }
 
 .skill-icon-row:hover{
-	/*filter: grayscale(0%);
-	opacity: 1.0;*/
 	color: grey;
 }
 

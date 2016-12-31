@@ -45,3 +45,6 @@ $(".back-button").click(function(){
 
 })
 
+$(".button-collapse").sideNav();
+
+

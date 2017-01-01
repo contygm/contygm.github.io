@@ -4,6 +4,26 @@
 
 }*/
 
+/*
+
+background grey: #F4F4F4;
+purple: #9C27B0;
+green: #4caf50;
+
+*/
+
+/*.container-fluid, #footer{
+	margin-bottom: 0;
+}*/
+
+.divider{
+	color: #4caf50;
+}
+
+ #portfolio, #career {
+	background-color: #F4F4F4;
+}
+
 body {
 	display: flex;
 	min-height: 100vh;

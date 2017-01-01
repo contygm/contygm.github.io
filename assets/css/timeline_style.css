@@ -218,7 +218,7 @@ entry background (box shadow right under)
   position: relative;
   margin-left: 60px;
   /* entry background */
-  background: white;
+  background: #F4F4F4;
   border-radius: 0.25em;
   /*padding: 1em;*/
 
@@ -240,6 +240,7 @@ entry background (box shadow right under)
 .cd-timeline-content p {
   margin: 2px 0 1em 0;
   line-height: 1.6;
+
 }
 .cd-timeline-content .cd-read-more {
   float: right;
@@ -264,7 +265,7 @@ entry background (box shadow right under)
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid white;
+  border-right: 7px solid transparent;
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
@@ -291,7 +292,7 @@ entry background (box shadow right under)
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: transparent;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -312,7 +313,7 @@ entry background (box shadow right under)
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: white;
+    border-right-color: transparent;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;

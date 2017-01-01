@@ -238,7 +238,7 @@ entry background (box shadow right under)
   display: inline-block;
 }
 .cd-timeline-content p {
-  margin: 1em 0;
+  margin: 2px 0 1em 0;
   line-height: 1.6;
 }
 .cd-timeline-content .cd-read-more {

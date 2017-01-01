@@ -17,7 +17,12 @@ green: #4caf50;
 }*/
 
 .divider{
-	color: #4caf50;
+	background-color: #4caf50;
+	padding-top: 3px;
+}
+
+#portfolio .divider, #career .divider{
+	margin-top: 20px;
 }
 
  #portfolio, #career {

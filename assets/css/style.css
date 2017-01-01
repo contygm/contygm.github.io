@@ -16,26 +16,7 @@ green: #4caf50;
 	margin-bottom: 0;
 }*/
 
-.divider{
-	background-color: #4caf50;
-	padding-top: 3px;
-}
 
-#portfolio .divider, #career .divider{
-	margin-top: 20px;
-}
-
- #portfolio, #career {
-	background-color: #F4F4F4;
-}
-
-#career{
-	margin-bottom: 0px;
-}
-
-#footer{
-	margin-top: 0px;
-}
 
 body {
 	display: flex;
@@ -51,6 +32,11 @@ main {
     opacity:0;
 }
 
+.divider{
+	background-color: #4caf50;
+	padding-top: 3px;
+}
+
 /* nav bar */
 .brand-logo{
 	margin-left: 10px;
@@ -59,11 +45,29 @@ main {
 /* banner */
 #banner {
 	height: 600px;
-	
+	/*background-image: url(../images/g-key.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	/*filter:hue-rotate(20deg) contrast(150%);*/
+	/*filter:hue-rotate(230deg) brightness(150%);*/
+	position: relative;
+}
+
+#banner img {
+	background-image: url(../images/g-key.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	/*filter:hue-rotate(20deg) contrast(150%);*/
+	filter:hue-rotate(230deg) brightness(150%);
+	z-index: -1;
 }
 
 #banner-content {
-	display: none;
+	background-color: lightgrey;
+	position: absolute;
+	top: 50%;
+  	transform: translateY(-50%);
 }
 
 /* about me */
@@ -102,6 +106,15 @@ main {
 }
 
 /* portfolio */
+
+#portfolio {
+	background-color: #F4F4F4;
+}
+
+#portfolio .divider{
+	margin-top: 20px;
+}
+
 .carousel{
 	height: 400px;
 }
@@ -219,7 +232,27 @@ h6 {
 	opacity: 1.0;
 }
 
+/* career */
+
+#career{
+	margin-bottom: 0px;
+	background-color: #F4F4F4;
+}
+
+#career .divider{
+	margin-top: 20px;
+}
+
+.position{
+	font-style: italic;
+	color: lightgrey;
+}
+
 /* footer */
+
+#footer{
+	margin-top: 0px;
+}
 
 #footer-contact .fa{
 	margin-right: 5px;
@@ -241,10 +274,5 @@ h6 {
 	color: grey;
 }
 
-/* career */
 
-.position{
-	font-style: italic;
-	color: lightgrey;
-}
 

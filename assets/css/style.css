@@ -82,7 +82,7 @@ main {
 }
 
 .title-face {
-	background-color: rgba(212, 212, 212, 0.7);
+	background-color: rgba(212, 212, 212, 0.9);
 }
 
 @media only screen and (max-width: 768px) {
@@ -118,41 +118,41 @@ main {
 }
 
 #first-item {
-	background-image: url(../images/rainbow.png);
+	background-image: url(../images/excelsior2.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 
 }
 
 #second-item {
-	background-image: url(../images/red.png);
+	background-image: url(../images/Bamazon.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #third-item {
-	background-image: url(../images/blue.png);
+	background-image: url(../images/seqBurger.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #fourth-item {
-	background-image: url(../images/green.png);
+	background-image: url(../images/starwars.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
 #fifth-item {
-	background-image: url(../images/purple.png);
+	background-image: url(../images/archer.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-#sixth-item {
+/*#sixth-item {
 	background-image: url(../images/yellow.gif);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-}
+}*/
 
 h6 {
 	margin-left: 10px;

@@ -39,6 +39,11 @@ main {
 	font-size: 18px;
 }
 
+#prof-pic{
+	filter: grayscale(100%);
+
+}
+
 .mern-pic{
 	filter: grayscale(100%);
 	opacity: 0.3;

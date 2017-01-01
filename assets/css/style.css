@@ -45,13 +45,8 @@ main {
 /* banner */
 #banner {
 	height: 600px;
-	/*background-image: url(../images/g-key.jpg);
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	/*filter:hue-rotate(20deg) contrast(150%);*/
-	/*filter:hue-rotate(230deg) brightness(150%);*/
 	position: relative;
-}
+} 
 
 #banner img {
 	background-image: url(../images/g-key.jpg);

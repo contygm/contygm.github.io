@@ -63,6 +63,11 @@ entry background (box shadow right under)
   width: 4px;
   background: lightgrey;
 }
+
+.cd-timeline-block {
+  margin-bottom: 10px;
+}
+
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
     margin-top: 3em;
@@ -238,7 +243,7 @@ entry background (box shadow right under)
   display: inline-block;
 }
 .cd-timeline-content p {
-  margin: 2px 0 1em 0;
+  margin: 2px 0 0 0;
   line-height: 1.6;
 
 }
@@ -255,6 +260,7 @@ entry background (box shadow right under)
 .cd-timeline-content .cd-date {
   float: left;
   opacity: .7;
+  margin-bottom: 5px;
 }
 
 .cd-timeline-content::before {
@@ -294,6 +300,12 @@ entry background (box shadow right under)
     border-color: transparent;
     border-left-color: transparent;
   }
+
+  .cd-timeline-content p {
+  margin: 2px 0 1em 0;
+  line-height: 1.6;
+
+}
   .cd-timeline-content .cd-read-more {
     float: left;
   }

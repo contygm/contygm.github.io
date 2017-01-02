@@ -1,4 +1,3 @@
-$(".button-collapse").sideNav();
 
 $(document).ready(function(){
 	$('.carousel').carousel({
@@ -7,8 +6,8 @@ $(document).ready(function(){
 		padding:20
 	});
 
+	// scroll effect for page
 	$(window).scroll( function(){
-    
        
         $('.fadeInBlock').each( function(i){
             

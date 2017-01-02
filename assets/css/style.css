@@ -40,7 +40,16 @@ main {
 /* nav bar */
 .brand-logo{
 	margin-left: 10px;
+
 }
+
+.nav-wrapper{
+	color: black;
+}
+
+/*nav ul li a{
+  color: black;
+} */
 
 /* banner */
 #banner {
@@ -74,8 +83,7 @@ main {
 
 #prof-pic{
 	filter: grayscale(100%);
-	/*max-width: 200px;
-*/}
+}
 
 .mern-pic{
 	filter: grayscale(100%);

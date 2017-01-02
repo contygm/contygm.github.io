@@ -6,6 +6,10 @@ $(document).ready(function(){
 		padding:20
 	});
 
+	$("nav").fadeIn(1500);
+	$("#banner img").fadeIn().animate({'opacity':'.3'},1750);
+	$("#banner-content").delay(1000).animate({'opacity':'1'},1500);
+
 	// scroll effect for page
 	$(window).scroll( function(){
        
@@ -44,9 +48,11 @@ $(".back-button").click(function(){
 
 })
 
-//$(".button-collapse").sideNav();
-
 $('.button-collapse').sideNav({
     closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
 });
+
+
+
+
 

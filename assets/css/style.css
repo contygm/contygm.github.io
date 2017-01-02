@@ -65,7 +65,7 @@ main {
 	/*filter:hue-rotate(20deg) contrast(150%);*/
 	filter:hue-rotate(230deg) brightness(150%);
 	z-index: -1;
-	opacity: 0.3;
+/*	opacity: 0.3;*/
 
 }
 
@@ -73,6 +73,7 @@ main {
 	position: absolute;
 	top: 50%;
   	transform: translateY(-50%);
+  	opacity: 0;
 }
 
 /* about me */

@@ -15,6 +15,12 @@
 #9c27b0 purple
 */
 
+.waves-effect.waves-grey .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: #828081;
+ }
+
 h1, h2, h5{
 	color: #1E392A;
 }
@@ -53,9 +59,9 @@ main {
 	background-color:#40BF7E;
 }
 
-/*nav ul li a{
-  color: black;
-} */
+#nav-mobile li:hover{
+	background-color: #9c27b0;
+}
 
 /* banner */
 #banner {
@@ -122,17 +128,17 @@ main {
 }
 
 .btn:hover {
-	background-color: #40BF7E;
-	opacity: 0.5;
-}
-
-.btn:active {
-	opacity: 1.0;
+	background-color: #9c27b0;
 }
 
 .btn-flat{
 	color: #1E392A;
 }
+
+.btn-flat:hover {
+	background-color: #9c27b0;
+}
+
 
 #portfolio {
 	background-color: #F4F4F4;
@@ -301,6 +307,10 @@ h6 {
 
 #footer-contact li a{
 	color: white;
+}
+
+#footer-contact li:hover a{
+	color: #9C27B0;
 }
 
 #footer-contact li:hover i{

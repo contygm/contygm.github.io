@@ -62,6 +62,7 @@ entry background (box shadow right under)
   height: 100%;
   width: 4px;
   background: lightgrey;
+
 }
 
 .cd-timeline-block {
@@ -112,7 +113,11 @@ entry background (box shadow right under)
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  /* grey for icon circle*/
+  /* icon circle*/
+  background: #40BF7E;
+  filter: brightness(0.8);
+  /*opacity: 0.8;*/
+  
   /*box-shadow: 0 0 0 4px grey, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
 }
 .cd-timeline-img img {
@@ -126,15 +131,15 @@ entry background (box shadow right under)
   margin-top: -12px;
   visibility: hidden;
 }
-.cd-timeline-img.cd-picture {
-  background: #75ce66;
+/*.cd-timeline-img.cd-picture {
+  background: #4caf50;
 }
 .cd-timeline-img.cd-movie {
-  background: #75ce66;
+  background: #D16AF2;
 }
 .cd-timeline-img.cd-location {
-  background: #75ce66;
-}
+  background: #D16AF2;
+}*/
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 25px;
@@ -261,6 +266,7 @@ entry background (box shadow right under)
   float: left;
   opacity: .7;
   margin-bottom: 5px;
+  color: #40BF7E;
 }
 
 .cd-timeline-content::before {

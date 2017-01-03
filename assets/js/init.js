@@ -7,7 +7,7 @@ $(document).ready(function(){
 	});
 
 	$("nav").fadeIn(1500);
-	$("#banner img").fadeIn().animate({'opacity':'.3'},1750);
+	$("#banner img").fadeIn().animate({'opacity':'.2'},1750);
 	$("#banner-content").delay(1000).animate({'opacity':'1'},1500);
 
 	// scroll effect for page

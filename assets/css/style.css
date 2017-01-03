@@ -6,17 +6,18 @@
 
 /*
 
-background grey: #F4F4F4;
-purple: #9C27B0;
-green: #4caf50;
+#40BF7E green
 
+#828081 grey
+
+#1E392A darkgreen
+
+#9c27b0 purple
 */
 
-/*.container-fluid, #footer{
-	margin-bottom: 0;
-}*/
-
-
+h1, h2, h5{
+	color: #1E392A;
+}
 
 body {
 	display: flex;
@@ -32,9 +33,13 @@ main {
     opacity:0;
 }
 
-.divider{
-	background-color: #4caf50;
+.section-divider{
+	background-color: #40BF7E;
 	padding-top: 3px;
+}
+
+#main-divider{
+	background-color: #828081;
 }
 
 /* nav bar */
@@ -45,6 +50,7 @@ main {
 
 .nav-wrapper{
 	color: black;
+	background-color:#40BF7E;
 }
 
 /*nav ul li a{
@@ -63,7 +69,7 @@ main {
 	height: 100%;
 	background-repeat: no-repeat;
 	/*filter:hue-rotate(20deg) contrast(150%);*/
-	filter:hue-rotate(230deg) brightness(150%);
+	filter:hue-rotate(260deg) brightness(150%);
 	z-index: -1;
 /*	opacity: 0.3;*/
 
@@ -97,20 +103,36 @@ main {
 }
 
 #contact-about .fa{
-	color: #4caf50;
+	color: #40BF7E;
 	margin: 0 2px 0 2px;
 }
 
 #contact-about .fa:hover{
-	filter: blur(2px);
+	color: #9c27b0;
 }
 
 #contact-about .fa:active{
-	filter: blur(5px);
-	color: #9C27B0;
+	filter: blur(3px);
 }
 
 /* portfolio */
+
+.btn{
+	background-color: #40BF7E;
+}
+
+.btn:hover {
+	background-color: #40BF7E;
+	opacity: 0.5;
+}
+
+.btn:active {
+	opacity: 1.0;
+}
+
+.btn-flat{
+	color: #1E392A;
+}
 
 #portfolio {
 	background-color: #F4F4F4;
@@ -141,9 +163,10 @@ main {
 	background-color: rgba(212, 212, 212, 0.9);
 }
 
-.first-info-face{
-	
+.tech-used{
+	color: white;
 }
+
 
 @media only screen and (max-width: 768px) {
 	.carousel{
@@ -232,11 +255,11 @@ h6 {
 }
 
 .skill-icon-row{	
-	color: #4caf50;
+	color: #40BF7E;
 }
 
 .skill-icon-row:hover{
-	color: grey;
+	color: #1E392A;
 }
 
 .skill-icon-row:hover:first-child img{
@@ -265,6 +288,7 @@ h6 {
 #footer{
 	margin-top: 0px;
 	padding-top: 2px;
+	background-color: #40BF7E;
 }
 
 #footer .row{

@@ -240,11 +240,12 @@ main {
 	background-size: 100% 100%;
 }
 
-/*#sixth-item {
-	background-image: url(../images/yellow.gif);
+#sixth-item {
+	background-image: url(../images/BubbleBust.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-}*/
+}
+
 
 h6 {
 	margin-left: 10px;

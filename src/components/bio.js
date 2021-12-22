@@ -29,7 +29,7 @@ const Bio = () => {
                 className="bio-avatar"
                 layout="fixed"
                 formats={["auto", "webp", "avif"]}
-                src="../images/gatsby-icon.png"
+                src="../assets/images/gatsby-icon.png"
                 width={50}
                 height={50}
                 quality={95}

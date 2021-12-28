@@ -66,6 +66,8 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  /* bootstap */
+
 }
 
 /* HTML elements */
@@ -153,4 +155,10 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
+}
+
+.no-bullets {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
 }

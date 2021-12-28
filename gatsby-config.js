@@ -10,12 +10,24 @@ module.exports = {
     social: {
       twitter: `handle`
     },
-    contact: {
-      linkedin: `https://www.linkedin.com/in/contygm`,
-      email: `contygm@gmail.com`,
-      github: `https://www.github.com/contygm`
-    },
-  },
+    contact: [
+      {
+        name: `LinkedIn`,
+        link: `https://www.linkedin.com/in/contygm`,
+        icon: `linkedin-green.png`
+      },
+      {
+        name: `Email`,
+        link: `contygm@gmail.com`,
+        icon: `email-green.png`
+      },
+      {
+        name: `GitHub`,
+        link: `https://www.github.com/contygm`,
+        icon: `github-green.png`
+      }
+    ],
+  }, 
   plugins: [
     `gatsby-plugin-image`,
     // {

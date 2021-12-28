@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import Bio from "../components/bio";
+import Contact from "../components/contact";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
@@ -13,6 +13,7 @@ const Index = ({ data, location }) => {
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>
             <button className="btn btn-success">Resume</button>
+            <Contact />
         </Layout>
     );
 };

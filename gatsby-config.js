@@ -8,7 +8,12 @@ module.exports = {
     description: `A simple portfolio with a resume`,
     siteUrl: `https://contygm.github.io/`,
     social: {
-      twitter: `contygm`,
+      twitter: `handle`
+    },
+    contact: {
+      linkedin: `https://www.linkedin.com/in/contygm`,
+      email: `contygm@gmail.com`,
+      github: `https://www.github.com/contygm`
     },
   },
   plugins: [

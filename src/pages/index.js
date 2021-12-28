@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { Link, graphql } from "gatsby";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -18,3 +18,13 @@ const Index = ({ data, location }) => {
 };
 
 export default Index;
+
+export const pageQuery = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+    }
+`;

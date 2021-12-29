@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Contact from "../components/contact";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -14,6 +14,7 @@ const Index = ({ data, location }) => {
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>
             <Contact icons={icons}/>
+            {/* TODO make btn the correct green */}
             <a href="/resume.pdf" className="btn btn-success" target="_parent">Resume</a>
         </Layout>
     );

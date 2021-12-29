@@ -15,17 +15,17 @@ module.exports = {
       {
         name: `LinkedIn`,
         link: `https://www.linkedin.com/in/contygm`,
-        icon: `linkedin-green.png`
+        icon: `linkedin-green`
       },
       {
         name: `GitHub`,
         link: `https://www.github.com/contygm`,
-        icon: `github-green.png`
+        icon: `github-green`
       },
       {
         name: `Email`,
         link: `contygm@gmail.com`,
-        icon: `email-green.png`
+        icon: `email-green`
       },
     ],
   }, 

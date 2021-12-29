@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image";
-import { siteMetadata } from "../../gatsby-config";
 
 const Contact = ({icons}) => {
     const {
@@ -30,12 +29,13 @@ const Contact = ({icons}) => {
                 Object.entries(contact).map(([i, platform]) => {
                     console.log(icons);
                     console.log(platform.icon);
+                    const imgData = icons.find((entry) => entry.name === platform.icon);
+                    const img = getImage(imgData.childImageSharp)
                     // TODO: move images to static folder
                     // const imageThing = getImage(image);
                     // const imageSrc = `../assets/images/${platform.icon}`;
                     return (
                         <div className="col" key={i}>
-                            {/* <GatsbyImage image={siteMetadata.image.childImageSharp?.gatsbyImageData} alt="ALT"/> */}
                             <a href={platform.link} target="_blank">
                                 {/* <StaticImage
                                     className=""
@@ -47,7 +47,7 @@ const Contact = ({icons}) => {
                                     height={30}
                                     quality={95}
                                 /> */}
-                                {/* <GatsbyImage image={image} alt="ALT"/> */}
+                                <GatsbyImage image={img} alt="ALT"/>
                                 {platform.name}
                             </a>
                     </div>)

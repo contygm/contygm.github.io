@@ -28,8 +28,8 @@ const Seo = ({ description, lang, meta, title }) => {
             htmlAttributes={{
                 lang,
             }}
-            title={title}
-            titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+            title={title || "GC"}
+            titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : `${defaultTitle}`}
             meta={[
                 {
                     name: `description`,
@@ -46,23 +46,7 @@ const Seo = ({ description, lang, meta, title }) => {
                 {
                     property: `og:type`,
                     content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata?.social?.twitter || ``,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
+                }
             ].concat(meta)}
         />
     );

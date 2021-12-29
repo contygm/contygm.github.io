@@ -157,8 +157,6 @@ a:focus {
   border-radius: 100%;
 }
 
-.no-bullets {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
+.contact-row {
+  margin-bottom: var(--spacing-4);
 }

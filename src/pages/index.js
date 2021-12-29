@@ -1,19 +1,20 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Contact from "../components/contact";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const Index = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata?.title || `Title`;
+    const siteTitle = data.site.siteMetadata?.title;
     const icons = data.allFile.nodes;
+
     return (
         <Layout location={location} title={siteTitle}>
-            <Seo title="Home" />
+            <Seo title="Portfolio" />
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>
-            <button className="btn btn-success">Resume</button>
             <Contact icons={icons}/>
+            <a href="/resume.pdf" className="btn btn-success" target="_parent">Resume</a>
         </Layout>
     );
 };

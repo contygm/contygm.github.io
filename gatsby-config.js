@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `GC Portfolio`,
+    image: `./gatsby.png`,
     author: {
       name: `Genevieve Conty`,
       summary: `who lives and works in Seattle building useful things.`,
@@ -17,15 +18,15 @@ module.exports = {
         icon: `linkedin-green.png`
       },
       {
+        name: `GitHub`,
+        link: `https://www.github.com/contygm`,
+        icon: `github-green.png`
+      },
+      {
         name: `Email`,
         link: `contygm@gmail.com`,
         icon: `email-green.png`
       },
-      {
-        name: `GitHub`,
-        link: `https://www.github.com/contygm`,
-        icon: `github-green.png`
-      }
     ],
   }, 
   plugins: [

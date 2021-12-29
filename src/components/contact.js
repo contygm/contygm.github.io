@@ -1,12 +1,14 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import { StaticImage, getImage, GatsbyImage } from "gatsby-plugin-image";
+import { siteMetadata } from "../../gatsby-config";
 
-const Contact = () => {
+const Contact = ({icons}) => {
     const {
         site: {
-            siteMetadata: { contact },
+            siteMetadata: { 
+                contact 
+            },
         },
     } = useStaticQuery(graphql`
     query ContactQuery {
@@ -26,22 +28,26 @@ const Contact = () => {
             {
                 
                 Object.entries(contact).map(([i, platform]) => {
-                    console.log(i);
+                    console.log(icons);
                     console.log(platform.icon);
-                    // const image = getImage(data.file)
+                    // TODO: move images to static folder
+                    // const imageThing = getImage(image);
+                    // const imageSrc = `../assets/images/${platform.icon}`;
                     return (
                         <div className="col" key={i}>
+                            {/* <GatsbyImage image={siteMetadata.image.childImageSharp?.gatsbyImageData} alt="ALT"/> */}
                             <a href={platform.link} target="_blank">
-                                <StaticImage
+                                {/* <StaticImage
                                     className=""
                                     layout="constrained"
                                     formats={["auto", "webp", "avif"]}
-                                    src={`../assets/images/${platform.icon}`}
+                                    src={imageSrc}
                                     alt="icon"
                                     width={30}
                                     height={30}
                                     quality={95}
-                                />
+                                /> */}
+                                {/* <GatsbyImage image={image} alt="ALT"/> */}
                                 {platform.name}
                             </a>
                     </div>)

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Contact from "../components/contact";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -35,7 +35,13 @@ export const pageQuery = graphql`
             nodes {
                 name
                 childImageSharp {
-                    gatsbyImageData
+                    gatsbyImageData(
+                        width: 30
+                        height: 30
+                        placeholder: BLURRED
+                        layout: CONSTRAINED
+                        formats: [AUTO, WEBP, AVIF]
+                    )
                 }
             }
         }

@@ -7,9 +7,11 @@ const Layout = ({ location, title, children, icons}) => {
     const blogPath = `${__PATH_PREFIX__}/blog/`;
     const isNotBlog = location.pathname !== blogPath;
     const isRootPath = location.pathname === rootPath;
+
+    const isBrowser = typeof window !== "undefined";
     
     // toggle theme
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const defaultDark = isBrowser ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
     const [theme, setTheme] = useLocalStorage('theme', (defaultDark ? 'dark' : 'light'));
     const themeToggler = () => {
         theme === 'light' ? 

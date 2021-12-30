@@ -9,7 +9,7 @@ const Index = ({ data, location }) => {
     const icons = data.allFile.nodes;
 
     return (
-        <Layout location={location} title={siteTitle}>
+        <Layout location={location} title={siteTitle} icons={icons}>
             <Seo title="Home" />
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>

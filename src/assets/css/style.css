@@ -62,13 +62,18 @@
   /* THEME */
   --color-primary: #008b48;
   --color-primary-light: #22b771;
+  --color-accent: #d1dce5;
+  /* light theme */
+  --main-background: #ffffff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #d1dce5;
   /* bootstap */
+}
 
+[data-theme='dark'] {
+  --main-background: #212529;
+  --color-text: #ffffff;
+  --color-text-light: #c7c7c7;
 }
 
 /* HTML elements */
@@ -79,6 +84,7 @@ html {
 }
 
 /* TODO  do own font, color etc*/
+
 
 /* Heading */
 

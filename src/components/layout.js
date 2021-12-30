@@ -1,39 +1,41 @@
 import * as React from "react";
+import useLocalStorage from "use-local-storage";
 // import { Link } from "gatsby";
 
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     const isRootPath = location.pathname === rootPath || location.pathname === `${__PATH_PREFIX__}/404`;
-    // let header;
+
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('theme', (defaultDark ? 'dark' : 'light'));
+    const themeToggler = () => {
+        console.log("toggle")
+        theme === 'light' ? 
+            setTheme('dark') : 
+            setTheme('light');
+        console.log("now it's", theme)
+    }
+
     let containerClass;
 
     if (isRootPath) {
         containerClass = "d-flex flex-column min-vh-100 justify-content-center align-items-center";
-        // header = (
-        //     <h1 className="main-heading">
-        //         <Link to="/">{title}</Link>
-        //     </h1>
-        // );
     } else {
         containerClass = "container";
-        // header = (
-        //     <Link className="header-link-home" to="/">
-        //         {title}
-        //     </Link>
-        // );
     }
 
     return (
-        <div data-is-root-path={isRootPath}>
-            {/* <header className="global-header">{header}</header>
-            
+        <div data-is-root-path={isRootPath} data-theme={theme}>
+            {/* 
             <footer>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://www.gatsbyjs.com">Gatsby</a>
             </footer> */}
-            
+
             <main className={containerClass}>
+            <button className="btn btn-primary" onClick={themeToggler}>Theme</button>
+
                 {children}
             </main>
         </div>

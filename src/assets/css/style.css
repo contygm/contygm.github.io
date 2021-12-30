@@ -88,22 +88,6 @@ html {
 
 /* Custom classes */
 
-/* .bio {
-  display: flex;
-  margin-bottom: var(--spacing-16);
-}
-
-.bio p {
-  margin-bottom: var(--spacing-0);
-}
-
-.bio-avatar {
-  margin-right: var(--spacing-4);
-  margin-bottom: var(--spacing-0);
-  min-width: 50px;
-  border-radius: 100%;
-} */
-
 .contact-row {
   margin-bottom: var(--spacing-4);
 }
@@ -120,4 +104,8 @@ html {
 .resume-button:hover {
   background-color: var(--color-primary-light);
   color: var(--color-accent);
+}
+
+.right {
+  float: right;
 }

@@ -32,10 +32,13 @@ const Layout = ({ location, title, children, icons}) => {
         const img = getImage(imgData.childImageSharp);
         
         return (
-            <div data-is-root-path={isRootPath} data-theme={theme} className="global-wrapper">
-                <button className="btn float-end" onClick={themeToggler}>
-                    <GatsbyImage image={img} alt={themeIcon}/>
-                </button>
+            <div data-is-root-path={isRootPath} data-theme={theme} className="global-wrapper ">
+                <div className="d-flex flex-row-reverse">
+                    <button className="btn " onClick={themeToggler}>
+                        <GatsbyImage image={img} alt={themeIcon}/>
+                    </button>
+                </div>
+                
                 <main className={containerClass}>
                     {children}
                 </main>

@@ -60,7 +60,8 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   /* THEME */
-  --color-primary: #005b99;
+  --color-primary: #008b48;
+  --color-primary-light: #22b771;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -159,4 +160,18 @@ a:focus {
 
 .contact-row {
   margin-bottom: var(--spacing-4);
+}
+
+.resume-button {
+  border: 1px solid var(--color-primary-light);
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-radius: var(--spacing-1);
+  padding: .375rem .75rem;
+  text-decoration: none;
+}
+
+.resume-button:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-accent);
 }

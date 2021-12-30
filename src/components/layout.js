@@ -3,7 +3,7 @@ import * as React from "react";
 
 const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
-    const isRootPath = location.pathname === rootPath;
+    const isRootPath = location.pathname === rootPath || location.pathname === `${__PATH_PREFIX__}/404`;
     // let header;
     let containerClass;
 
@@ -15,7 +15,7 @@ const Layout = ({ location, title, children }) => {
         //     </h1>
         // );
     } else {
-        containerClass = '"container';
+        containerClass = "container";
         // header = (
         //     <Link className="header-link-home" to="/">
         //         {title}

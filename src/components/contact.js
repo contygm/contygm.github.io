@@ -28,10 +28,9 @@ const Contact = ({icons}) => {
                 Object.entries(contact).map(([i, platform]) => {
                     const imgData = icons.find((entry) => entry.name === platform.icon);
                     const img = getImage(imgData.childImageSharp)
-                    // TODO email link needs maito to
                     return (
                         <div className="col" key={i}>
-                            <a href={platform.link} target="_blank" rel="noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title={platform.name}>
+                            <a href={platform.name === "Email" ? `mailto:${platform.link}`: platform.link} target="_blank" rel="noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title={platform.name}>
                                 <GatsbyImage image={img} alt={platform.icon}/>
                             </a>
                         </div>

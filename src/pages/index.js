@@ -15,7 +15,7 @@ const Index = ({ data, location }) => {
             <p>Full-Stack Software Engineer</p>
             <Contact icons={icons}/>
             {/* TODO make btn the correct green */}
-            <a href="/resume.pdf" className="btn btn-success" target="_parent">Resume</a>
+            <a href="/resume.pdf" className="resume-button" target="_blank">Resume</a>
         </Layout>
     );
 };

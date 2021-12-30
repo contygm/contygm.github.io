@@ -67,13 +67,24 @@
   --main-background: #ffffff;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  /* bootstap */
+  /* dark theme*/
+  --dark-main-background: #212529;
+  --dark-color-text: #ffffff;
+  --dark-color-text-light: #c7c7c7;
 }
 
-[data-theme='dark'] {
-  --main-background: #212529;
-  --color-text: #ffffff;
-  --color-text-light: #c7c7c7;
+body {
+  transition: all .5s;
+}
+
+.global-wrapper[data-theme="light"] {
+  background: var(--main-background);
+  color: var(--color-text);
+}
+
+.global-wrapper[data-theme="dark"] {
+  background: var(--dark-main-background);
+  color: var(--dark-color-text);
 }
 
 /* HTML elements */
@@ -98,11 +109,6 @@ h6 {
 } */
 
 /* Custom classes */
-
-/* NOTE: interesting example */
-/* .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
-} */
 
 /* .bio {
   display: flex;

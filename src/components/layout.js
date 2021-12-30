@@ -6,7 +6,7 @@ const Layout = ({ location, title, children }) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     const isRootPath = location.pathname === rootPath || location.pathname === `${__PATH_PREFIX__}/404`;
 
-    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const defaultDark = window.matchMedia('(prefers-color-scheme: light)').matches;
     const [theme, setTheme] = useLocalStorage('theme', (defaultDark ? 'dark' : 'light'));
     const themeToggler = () => {
         console.log("toggle")
@@ -25,17 +25,15 @@ const Layout = ({ location, title, children }) => {
     }
 
     return (
-        <div data-is-root-path={isRootPath} data-theme={theme}>
+        <div data-is-root-path={isRootPath} data-theme={theme} className="global-wrapper">
             {/* 
             <footer>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://www.gatsbyjs.com">Gatsby</a>
             </footer> */}
-
-            <main className={containerClass}>
             <button className="btn btn-primary" onClick={themeToggler}>Theme</button>
-
+            <main className={containerClass}>
                 {children}
             </main>
         </div>

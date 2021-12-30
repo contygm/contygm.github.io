@@ -30,13 +30,7 @@
   --spacing-24: 6rem;
   --spacing-32: 8rem;
   /* FONT FAMILY */
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
+  --fontFamily: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   /* WEIGHT */
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
@@ -73,8 +67,13 @@
   --dark-color-text-light: #c7c7c7;
 }
 
-body {
-  transition: all .5s;
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.global-wrapper {
+  font-family: var(--fontFamily);
 }
 
 .global-wrapper[data-theme="light"] {
@@ -86,27 +85,6 @@ body {
   background: var(--dark-main-background);
   color: var(--dark-color-text);
 }
-
-/* HTML elements */
-
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* TODO  do own font, color etc*/
-
-
-/* Heading */
-
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading);
-} */
 
 /* Custom classes */
 
@@ -133,7 +111,7 @@ h6 {
 .resume-button {
   border: 1px solid var(--color-primary-light);
   background-color: var(--color-primary);
-  color: var(--color-accent);
+  color: white;
   border-radius: var(--spacing-1);
   padding: .375rem .75rem;
   text-decoration: none;

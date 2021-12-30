@@ -10,11 +10,10 @@ const Index = ({ data, location }) => {
 
     return (
         <Layout location={location} title={siteTitle}>
-            <Seo title="Portfolio" />
+            <Seo title="Home" />
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>
             <Contact icons={icons}/>
-            {/* TODO make btn the correct green */}
             <a href="/resume.pdf" className="resume-button" target="_blank">Resume</a>
         </Layout>
     );

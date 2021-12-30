@@ -141,7 +141,6 @@ module.exports = {
         name: `GC Portfolio`,
         short_name: `GC`,
         start_url: `/`,
-        background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,

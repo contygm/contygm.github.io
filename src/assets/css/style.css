@@ -74,28 +74,11 @@
 /* HTML elements */
 
 html {
-  line-height: var(--lineHeight-normal);
-  font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* TODO  do own font, color etc*/
-body {
-  font-family: var(--font-body);
-  font-size: var(--fontSize-1);
-  color: var(--color-text);
-}
-
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
-}
-
-hr {
-  background: var(--color-accent);
-  height: 1px;
-  border: 0;
-}
 
 /* Heading */
 
@@ -108,33 +91,6 @@ h6 {
   font-family: var(--font-heading);
 } */
 
-h1 > a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h2 > a,
-h3 > a,
-h4 > a,
-h5 > a,
-h6 > a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Prose */
-
-/* Link */
-
-a {
-  color: var(--color-primary);
-}
-
-a:hover,
-a:focus {
-  text-decoration: none;
-}
-
 /* Custom classes */
 
 /* NOTE: interesting example */
@@ -142,7 +98,7 @@ a:focus {
   margin-bottom: var(--spacing-20);
 } */
 
-.bio {
+/* .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
 }
@@ -156,7 +112,7 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
-}
+} */
 
 .contact-row {
   margin-bottom: var(--spacing-4);

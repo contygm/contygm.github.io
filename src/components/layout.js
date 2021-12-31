@@ -6,7 +6,7 @@ const Layout = ({ location, title, children, icons}) => {
     const rootPath = `${__PATH_PREFIX__}/`;
     const isRootPath = location.pathname === rootPath;
 
-    const isBrowser = typeof window !== "undefined";
+    const isBrowser = typeof window !== `undefined`;
     
     // toggle theme
     const defaultDark = isBrowser ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;

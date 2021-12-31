@@ -1,7 +1,0 @@
-.cache
-package.json
-package-lock.json
-public
-build
-coverage
-node_modules

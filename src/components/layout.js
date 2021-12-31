@@ -4,8 +4,6 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 const Layout = ({ location, title, children, icons}) => {
     const rootPath = `${__PATH_PREFIX__}/`;
-    const blogPath = `${__PATH_PREFIX__}/blog/`;
-    const isNotBlog = location.pathname !== blogPath;
     const isRootPath = location.pathname === rootPath;
 
     const isBrowser = typeof window !== "undefined";
@@ -19,13 +17,7 @@ const Layout = ({ location, title, children, icons}) => {
             setTheme('light');
     }
 
-    let containerClass;
-
-    if (isNotBlog) {
-        containerClass = "d-flex flex-column min-vh-100 justify-content-center align-items-center";
-    } else {
-        containerClass = "container";
-    }
+    const containerClass = "d-flex flex-column min-vh-100 justify-content-center align-items-center";
 
     if (isRootPath) {
         // get correct theme icon

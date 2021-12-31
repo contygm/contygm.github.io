@@ -10,7 +10,6 @@ const Layout = ({ location, title, children, icons}) => {
 
     const containerClass = "d-flex flex-column min-vh-100 justify-content-center align-items-center";
 
-    // console.log(isRootPath && isBrowser)
     if (isRootPath && isBrowser) {
         const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const [theme, setTheme] = useLocalStorage('theme', (defaultDark ? 'dark' : 'light'));

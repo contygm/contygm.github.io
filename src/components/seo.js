@@ -11,6 +11,8 @@ const Seo = ({ description, lang, meta, title }) => {
                     siteMetadata {
                         title
                         description
+                        image
+                        siteUrl
                         social {
                             twitter
                         }
@@ -22,6 +24,7 @@ const Seo = ({ description, lang, meta, title }) => {
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
+    const logoUrl = `${site.siteMetadata.siteUrl}${site.siteMetadata.imagel}`;
 
     return (
         <Helmet
@@ -46,6 +49,11 @@ const Seo = ({ description, lang, meta, title }) => {
                 {
                     property: `og:type`,
                     content: `website`,
+                }
+                ,
+                {
+                    property: `og:image`,
+                    content: logoUrl,
                 }
             ].concat(meta)}
         />

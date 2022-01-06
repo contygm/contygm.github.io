@@ -2,6 +2,7 @@ import * as React from "react";
 
 const Layout = ({ location, title, children, icons}) => {
     const rootPath = `${__PATH_PREFIX__}/`;
+    const projectPath = `${__PATH_PREFIX__}/projects`;
     const isRootPath = location.pathname === rootPath;
     const containerClass = "d-flex flex-column min-vh-100 justify-content-center align-items-center";
 

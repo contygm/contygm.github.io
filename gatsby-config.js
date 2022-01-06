@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `GC`,
-    image: `/logo.png`,
+    image: `logo.png`,
     author: {
       name: `Genevieve Conty`,
       summary: `who lives and works in Seattle building useful things.`,

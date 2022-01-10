@@ -17,6 +17,7 @@ const Projects = ({ data, location }) => {
 
 export default Projects;
 
+// TODO grab all the projects
 export const pageQuery = graphql`
   query {
     site {

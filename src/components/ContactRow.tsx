@@ -1,8 +1,13 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-const Contact = ({icons}) => {
+interface ContactEntry {
+	icon: string,
+	link: string,
+	name: string
+}
+
+const ContactRow = () => {
     const {
         site: {
             siteMetadata: { 
@@ -25,13 +30,15 @@ const Contact = ({icons}) => {
     return (
         <section className="row contact-row">
             {
-                Object.entries(contact).map(([i, platform]) => {
-                    const imgData = icons.find((entry) => entry.name === platform.icon);
-                    const img = getImage(imgData.childImageSharp)
+                Object.entries(contact).map(([i, entry]) => {
+					const platform = entry as ContactEntry;
                     return (
                         <div className="col" key={i}>
-                            <a href={platform.name === "Email" ? `mailto:${platform.link}`: platform.link} target="_blank" rel="noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title={platform.name}>
-                                <GatsbyImage image={img} alt={platform.icon}/>
+                            <a href={platform.name === "Email" ? `mailto:${platform.link}`: platform.link} target="_blank" rel="noreferrer" title={platform.name}>
+								<span className={`icon has-text-success`}>
+									<i className={`fas ${platform.icon}`} aria-hidden="true"></i>
+								</span>
+								{platform.name}
                             </a>
                         </div>
                     )
@@ -41,4 +48,4 @@ const Contact = ({icons}) => {
     );
 };
 
-export default Contact;
+export default ContactRow;

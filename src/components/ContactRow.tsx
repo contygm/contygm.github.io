@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 interface ContactEntry {
 	icon: string,
@@ -28,22 +28,24 @@ const ContactRow = () => {
     }`);
 
     return (
-        <section className="row contact-row">
+        <section className="container has-text-centered">
             {
                 Object.entries(contact).map(([i, entry]) => {
-					const platform = entry as ContactEntry;
+                    const platform = entry as ContactEntry;
                     return (
-                        <div className="col" key={i}>
-                            <a href={platform.name === "Email" ? `mailto:${platform.link}`: platform.link} target="_blank" rel="noreferrer" title={platform.name}>
-								<span className={`icon has-text-success`}>
-									<i className={`fas ${platform.icon}`} aria-hidden="true"></i>
-								</span>
-								{platform.name}
-                            </a>
-                        </div>
+                        <a className="mx-1" href={platform.name === "Email" ? `mailto:${platform.link}`: platform.link} target="_blank" rel="noreferrer" title={platform.name}>
+                            <span className={`icon has-text-success is-medium`}>
+                                <i className={`fas fa-2x ${platform.icon}`} aria-hidden="true"></i>
+                            </span>
+                        </a>
                     )
                 })
             }
+            <p>
+                <Link to="contyg-resume.pdf" className="has-text-success" target="_blank" rel="noreferrer" title="Resume">
+                    Resume
+                </Link>
+            </p>
         </section>
     );
 };

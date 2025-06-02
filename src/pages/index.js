@@ -14,7 +14,7 @@ const Index = ({ data, location }) => {
             <h1>Genevieve Conty</h1>
             <p>Full-Stack Software Engineer</p>
             <Contact icons={icons}/>
-            <a href="/resume.pdf" className="resume-button" target="_blank">Resume</a>
+            <a href="/contyg-resume.pdf" className="resume-button" target="_blank">Resume</a>
         </Layout>
     );
 };
